@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "champions.component.scss"
+    ],
+    "names": [],
+    "file": "champions.component.css"
+}

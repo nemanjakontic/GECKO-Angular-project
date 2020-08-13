@@ -1,0 +1,40 @@
+@import '../../sass/base/variables';
+@import '../../sass/buttons/button';
+@import '../../sass/base/animations';
+
+.header {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8)), 
+        url('../../assets/f1-background.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 95vh;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    position: relative;
+
+    &__center {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.heading-primary {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    animation: moveInTop 1s;
+
+    &--main {
+        display: block;
+        font-size: 15rem;
+    }
+
+    &--sub {
+        font-size: 6rem;
+    }
+}

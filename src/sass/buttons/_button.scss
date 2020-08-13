@@ -1,0 +1,28 @@
+@import '../base/animations';
+
+.btn {
+    padding: 2rem 4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10rem;
+    font-size: $default-font-size;
+    box-shadow: 0 2rem 4rem rgba($color-black, .8);
+    transition: all .5s;
+
+    &--white {
+        background-color: $color-white;
+    }
+
+    &:hover {
+        transform: translateY(-.7rem) scale(1.1);
+        box-shadow: 0 3rem 5rem rgba($color-black, .6);
+    }
+
+    &:active {
+        transform: translateY(.7rem) scale(0.96);
+    }
+
+    &--animated {
+        animation: moveInBottom 1s;
+    }
+}

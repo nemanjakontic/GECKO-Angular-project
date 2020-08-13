@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACF,UAAU,EAAE,MAAM;CACrB;;AAED,AAAA,iBAAiB,CAAC;EACd,SAAS,EAAE,IAAI;CAClB;;AAED,AAAA,UAAU,CAAC;EACP,SAAS,ECJO,MAAM;CDKzB",
+    "sources": [
+        "champion-item.component.scss",
+        "../../../../sass/base/_variables.scss"
+    ],
+    "names": [],
+    "file": "champion-item.component.css"
+}

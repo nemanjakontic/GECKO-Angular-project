@@ -1,0 +1,8 @@
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+<div class="row" *ngIf="!isLoading">
+    <app-champion-item 
+        class="col-4"
+        *ngFor="let season of listOfSeasons" 
+        [season]="season"
+    ></app-champion-item>
+</div>
