@@ -1,7 +1,7 @@
 <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
 <div class="row" *ngIf="!isLoading">
     <app-champion-item 
-        class="col-4"
+        class="col-10 offset-1 col-md-6 offset-md-0 col-lg-4 mb-5"
         *ngFor="let season of listOfSeasons" 
         [season]="season"
     ></app-champion-item>

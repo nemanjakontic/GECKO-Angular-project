@@ -13,7 +13,7 @@ export class ApiServiceService {
   getAllChampions() {
     return this.http.get(
         'http://ergast.com/api/f1/driverStandings/1.json?limit=14&offset=55'
-        ).pipe(map(response => {
+        ).pipe(map((response: any) => {
           return response.MRData.StandingsTable.StandingsLists;
         }));
   }
@@ -21,7 +21,7 @@ export class ApiServiceService {
   getAllRacesForYear(year: number) {
     return this.http.get(
         `http://ergast.com/api/f1/${year}/results/1.json`
-        ).pipe(map(response => {
+        ).pipe(map((response: any) => {
           return response.MRData.RaceTable.Races;
         }));
   }

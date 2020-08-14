@@ -1,0 +1,23 @@
+@import '../base/variables';
+
+.my-modal {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+
+    &__content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background-color: $color-white;
+        // height: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        box-shadow: 0 2rem 6rem rgba($color-black, .9);
+        border-radius: 2rem;
+        animation-name: moveInCenter;
+        animation-duration: .3s;
+        padding: 2rem 4rem;
+    }
+}

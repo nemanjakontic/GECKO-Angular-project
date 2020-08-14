@@ -1,0 +1,43 @@
+.heading-secondary {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    background-image: 
+        linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8));
+    color: transparent;
+    background-clip: text;
+}
+
+.years {
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .years {
+        display: inline;
+    }
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+
+    &-year {
+        font-size: 3rem;
+        letter-spacing: 1rem;
+    }
+
+    &-constructor {
+        text-transform: uppercase;
+    }
+
+    &-race {
+        font-size: 2rem;
+    }
+}
+
+.paragraph {
+    font-size: 2rem;
+}

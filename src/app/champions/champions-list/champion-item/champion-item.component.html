@@ -1,5 +1,11 @@
-<div class="card" (click)="openDetails()">
-    <h3 class="heading-tertiary">{{ season.season }}</h3>
-    <p class="paragraph">{{ season.DriverStandings[0].Driver.givenName }} 
-        {{ season.DriverStandings[0].Driver.familyName }}</p>
+<div class="cardChamp" (click)="openDetails()" style="cursor: pointer;">
+    <div class="cardChamp__side cardChamp__side--front  d-flex flex-column justify-content-center align-items-center">
+        <h3 class="heading-tertiary heading-tertiary-year">{{ season.season }}</h3>
+        <p class="paragraph">{{ season.DriverStandings[0].Driver.givenName }} 
+                            {{ season.DriverStandings[0].Driver.familyName }}</p>
+    </div>
+    <div class="cardChamp__side cardChamp__side--back  d-flex flex-column justify-content-center align-items-center">
+        <h3 class="heading-tertiary heading-tertiary-constructor">{{ season.DriverStandings[0].Constructors[0].name }}</h3>
+        <p class="paragraph">{{ season.DriverStandings[0].Driver.nationality }}</p>
+    </div>
 </div>

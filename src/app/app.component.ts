@@ -8,7 +8,7 @@ import { ApiServiceService } from './services/api-service.service';
 })
 export class AppComponent {
   title = 'GeckoAngularProject';
-  
+
   constructor() {}
 
 }

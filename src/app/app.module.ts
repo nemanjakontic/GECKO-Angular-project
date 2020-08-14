@@ -10,6 +10,7 @@ import { ChampionItemComponent } from './champions/champions-list/champion-item/
 import { ChampionDetailComponent } from './champions/champions-list/champion-item/champion-detail/champion-detail.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { HeaderComponent } from './header/header.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './header/header.component';
     ChampionItemComponent,
     ChampionDetailComponent,
     LoadingSpinnerComponent,
-    HeaderComponent
+    HeaderComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

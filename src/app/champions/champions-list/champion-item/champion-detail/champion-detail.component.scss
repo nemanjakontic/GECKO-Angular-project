@@ -1,7 +1,49 @@
-.yellow {
-    background-color: yellow;
+@import '../../../../../sass/base/variables';
+@import '../../../../../sass/base/typography';
+@import '../../../../../sass/buttons/modal';
+@import '../../../../../sass/buttons/backdrop';
+
+.stripe {
+    font-size: 2rem;
+    box-shadow: 0 2rem 4rem rgba($color-black, .6);
+    border-radius: 1rem;
+    border: 5px solid $color-black;
+
+    &__one {
+        list-style: none;
+        height: 7rem;
+        width: 100%;
+        background-image: 
+                linear-gradient(
+                to right,
+                rgb($color-primary-dark, 1),
+                rgb($color-primary-light, 1));
+        color: $color-white;
+        transition: all .4s;
+
+        &:not(:last-child) {
+            border-bottom: 1rem solid $color-black;
+        }
+
+        &:hover {
+            transform: scale(0.991);
+            background-image: 
+                linear-gradient(
+                to right bottom,
+                rgb($color-primary-dark, 1),
+                rgb($color-primary-light, 1));
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
 }
 
-.blue {
-    background-color: blue;
+ul {
+    margin: 0;
+}
+
+.yellow {
+    color: gold;
 }

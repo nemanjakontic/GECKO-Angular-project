@@ -1,6 +1,40 @@
 <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
-<ul>
-    <li *ngFor="let race of racesChampions" class="{{ this.driverCode === race.Results[0].Driver.code ? 'yellow' : ''}}">
-        {{ race.raceName }} - {{ race.Results[0].Driver.givenName }} {{ race.Results[0].Driver.familyName }}
-    </li>
-</ul>
+<div *ngIf="!isLoading" class="mb-5 full-container">
+    <div class="text-center my-5">
+        <h2 class="heading-secondary">
+            Race winners - <span class="years">{{year}}</span> 
+        </h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="stripe">
+                    <ul>
+                        <li 
+                            *ngFor="let race of racesChampions" 
+                            class=" stripe__one 
+                                    d-flex 
+                                    flex-column 
+                                    justify-content-center 
+                                    pl-5
+                                    {{ this.driverCode === race.Results[0].Driver.code ? 'yellow' : ''}}"
+                            style="cursor: pointer;"
+                            (click)="showDetails(race)"
+                        >
+                            <h3 class="heading-tertiary heading-tertiary-race">
+                                {{ race.raceName }} - 
+                                {{ race.Results[0].Driver.givenName }} 
+                                {{ race.Results[0].Driver.familyName }}
+                                &nbsp;
+                                &nbsp;
+                                <i class="fa fa-trophy" *ngIf="this.driverCode === race.Results[0].Driver.code">&nbsp;
+                                    CHAMPION</i>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-modal *ngIf="showModal" [race]="selectedRace"></app-modal>

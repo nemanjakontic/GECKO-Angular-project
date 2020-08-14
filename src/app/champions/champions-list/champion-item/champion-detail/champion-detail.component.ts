@@ -13,6 +13,8 @@ export class ChampionDetailComponent implements OnInit {
   racesChampions = [];
   driverCode: string;
   isLoading = false;
+  showModal = false;
+  selectedRace;
 
   constructor(private route: ActivatedRoute,
               private apiService: ApiServiceService) { }
@@ -33,7 +35,11 @@ export class ChampionDetailComponent implements OnInit {
             });
         });
     });
+  }
 
+  showDetails(race) {
+    this.selectedRace = race;
+    this.showModal = true;
   }
 
 }
