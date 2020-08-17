@@ -12,4 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navigateTo(section: string) {
+    window.location.hash = '';
+    window.location.hash = section;
+  }
+
 }

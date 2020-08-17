@@ -1,5 +1,12 @@
 @import '../../../sass/base/animations';
+@import '../../../sass/base/variables';
 
 .row {
     animation: moveInBottom2 1s;
+}
+
+.alert {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.6rem;
 }
