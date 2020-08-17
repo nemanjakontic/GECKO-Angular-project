@@ -3,6 +3,9 @@
         <div class="col-12">
             <div class="my-modal">
                 <div class="my-modal__content">
+                    <div class="d-flex justify-content-end">
+                        <i class="fa fa-window-close" (click)="closeModal()"></i>
+                    </div>
                     <h2 class="heading-secondary text-center">{{race.Circuit.circuitName}} - 
                             {{race.Circuit.Location.locality}}, 
                             {{race.Circuit.Location.country}}</h2>

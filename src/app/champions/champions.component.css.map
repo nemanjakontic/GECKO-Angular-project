@@ -1,8 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AEAA,AAAA,kBAAkB,CAAC;EACf,cAAc,EAAE,SAAS;EACzB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,gBAAgB,EACZ,4EAG8B;EAClC,KAAK,EAAE,WAAW;EAClB,eAAe,EAAE,IAAI;CACxB;;AAED,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,KAAK;CACjB;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,MAAM,CAAC;IACH,OAAO,EAAE,MAAM;GAClB;;;AAGL,AAAA,iBAAiB,CAAC;EACd,SAAS,EAAE,IAAI;CAclB;;AAZI,AAAD,sBAAM,CAAC;EACH,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,IAAI;CACvB;;AAEA,AAAD,6BAAa,CAAC;EACV,cAAc,EAAE,SAAS;CAC5B;;AAEA,AAAD,sBAAM,CAAC;EACH,SAAS,EAAE,IAAI;CAClB;;AAGL,AAAA,UAAU,CAAC;EACP,SAAS,EAAE,IAAI;CAClB",
     "sources": [
-        "champions.component.scss"
+        "champions.component.scss",
+        "../../sass/base/_variables.scss",
+        "../../sass/base/_typography.scss"
     ],
     "names": [],
     "file": "champions.component.css"

@@ -42,4 +42,8 @@ export class ChampionDetailComponent implements OnInit {
     this.showModal = true;
   }
 
+  close() {
+    this.showModal = false;
+  }
+
 }

@@ -11,6 +11,7 @@ import { ChampionDetailComponent } from './champions/champions-list/champion-ite
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { HeaderComponent } from './header/header.component';
 import { ModalComponent } from './modal/modal.component';
+import { BackdropComponent } from './backdrop/backdrop.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ModalComponent } from './modal/modal.component';
     ChampionDetailComponent,
     LoadingSpinnerComponent,
     HeaderComponent,
-    ModalComponent
+    ModalComponent,
+    BackdropComponent
   ],
   imports: [
     BrowserModule,

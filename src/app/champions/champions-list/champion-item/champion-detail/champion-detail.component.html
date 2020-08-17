@@ -37,4 +37,5 @@
         </div>
     </div>
 </div>
-<app-modal *ngIf="showModal" [race]="selectedRace"></app-modal>
+<app-modal *ngIf="showModal" [race]="selectedRace" (closeEmitter)="close()"></app-modal>
+<app-backdrop *ngIf="showModal" (closeEmitter)=close()></app-backdrop>

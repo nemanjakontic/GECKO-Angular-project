@@ -1,8 +1,15 @@
 @import '../../sass/buttons/modal';
 @import '../../sass/base/typography';
+@import '../../sass/base/variables';
 
 li {
   text-decoration: none;
   font-size: 2rem;
   list-style: none;
+}
+
+.fa-window-close {
+  font-size: 3rem;
+  cursor: pointer;
+  color: $color-primary-dark;
 }
