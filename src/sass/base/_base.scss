@@ -1,4 +1,5 @@
 @import './variables';
+@import './animations';
 
 *,
 *::after,
@@ -19,4 +20,5 @@ body {
     color: $color-grey-dark;
     box-sizing: border-box;
     position: relative;
+    animation: moveIn 2s;
 }
