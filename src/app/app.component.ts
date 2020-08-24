@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ApiServiceService } from './services/api-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,4 @@ import { ApiServiceService } from './services/api-service.service';
 })
 export class AppComponent {
   title = 'GeckoAngularProject';
-
-  constructor() {}
-
 }

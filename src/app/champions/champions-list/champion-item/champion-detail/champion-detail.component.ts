@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
 @Component({
@@ -22,11 +22,9 @@ export class ChampionDetailComponent implements OnInit {
   ngOnInit(): void {
     this.isLoading = true;
     this.route.params.subscribe((params) => {
-      console.log(params);
       this.year = +params.year;
       this.apiService.getAllRacesForYear(this.year)
         .subscribe(races => {
-          console.log(races);
           this.racesChampions = races;
           this.route.queryParams
             .subscribe(queryParams => {

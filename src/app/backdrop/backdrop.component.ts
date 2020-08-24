@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -6,14 +6,9 @@ import { Subject } from 'rxjs';
   templateUrl: './backdrop.component.html',
   styleUrls: ['./backdrop.component.scss']
 })
-export class BackdropComponent implements OnInit {
+export class BackdropComponent {
 
   @Output() closeEmitter = new Subject();
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   closeModal() {
     this.closeEmitter.next(false);

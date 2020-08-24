@@ -118,8 +118,32 @@
   }
 }
 
+@-webkit-keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .row {
   -webkit-animation: moveInBottom2 1s;
           animation: moveInBottom2 1s;
+}
+
+.alert {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=champions-list.component.css.map */

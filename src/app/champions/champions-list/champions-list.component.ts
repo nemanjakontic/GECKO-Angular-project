@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from 'src/app/services/api-service.service';
-import { error } from 'console';
 
 @Component({
   selector: 'app-champions-list',
@@ -19,7 +18,6 @@ export class ChampionsListComponent implements OnInit {
     this.isLoading = true;
     this.apiService.getAllChampions()
       .subscribe(seasonsList => {
-        console.log(seasonsList);
         this.listOfSeasons = seasonsList;
         this.isLoading = false;
       }, error => {

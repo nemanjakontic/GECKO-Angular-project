@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://ergast.com/api/f1/',
+  getAllChampions: 'driverStandings/1.json?limit=14&offset=55',
+  getAllRacesForYear: '/results/1.json'
 };
 
 /*

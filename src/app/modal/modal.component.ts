@@ -7,15 +7,10 @@ import { Subject } from 'rxjs';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
   @Input() race;
   @Output() closeEmitter = new Subject<boolean>();
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   closeModal() {
     this.closeEmitter.next(false);
