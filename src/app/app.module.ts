@@ -1,30 +1,22 @@
-import { ChampionsModuleModule } from './champions/champions-module/champions-module.module';
-import { SharedModuleModule } from './shared-module/shared-module.module';
+import { ChampionsModule } from './champions/champions.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // ChampionsComponent,
-    // ChampionsListComponent,
-    // ChampionItemComponent,
-    // ChampionDetailComponent,
-    // LoadingSpinnerComponent,
-    // HeaderComponent,
-    // ModalComponent,
-    // BackdropComponent
+    AppComponent
   ],
   imports: [
+    FontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ChampionsModuleModule,
-    SharedModuleModule
+    ChampionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
