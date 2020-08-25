@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,7 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(private router: Router){}
+
   navigateTo(section: string) {
+    this.router.navigate(["/seasonChampions"]);
     window.location.hash = '';
     window.location.hash = section;
   }

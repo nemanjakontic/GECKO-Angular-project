@@ -23,16 +23,15 @@ export class ApiServiceService {
   constructor(private http: HttpClient) { }
 
   getAllChampions() {
-    return this.http.get(
+    return this.http.get<ResponseData>(
         environment.apiUrl + environment.getAllChampions
         ).pipe(map((response: ResponseData) => {
-          console.log(response);
           return response.MRData.StandingsTable.StandingsLists;
         }));
   }
 
   getAllRacesForYear(year: number) {
-    return this.http.get(
+    return this.http.get<ResponseData>(
         environment.apiUrl + year + environment.getAllRacesForYear
         ).pipe(map((response: ResponseData) => {
           return response.MRData.RaceTable.Races;
