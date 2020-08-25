@@ -6,14 +6,11 @@ import { ChampionDetailComponent } from './champions/champions-list/champion-ite
 
 const routes: Routes = [
   { path: '', redirectTo: 'seasonChampions', pathMatch: 'full'},
-  { path: 'seasonChampions', loadChildren: './champions/champions.module#ChampionsModule'},
-  { path: 'seasonChampions/:year', loadChildren: './champions/champions-list/champion-item/champion-detail/champion-detail.module#ChampionDetailModule'}
-  // { path: 'seasonChampions', component: ChampionsComponent},
-  // { path: 'seasonChampions/:year', component: ChampionDetailComponent}
+  { path: 'seasonChampions', loadChildren: './champions/champions.module#ChampionsModule'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
