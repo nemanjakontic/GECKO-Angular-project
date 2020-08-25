@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
     "bootstrap": "^4.5.2",
+    "font-awesome": "^4.7.0",
     "ngx-page-scroll": "^7.0.3",
     "ngx-page-scroll-core": "^7.0.3",
     "rxjs": "~6.5.4",

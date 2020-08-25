@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
-import { HeaderComponent } from '../header/header.component';
-import { ModalComponent } from '../modal/modal.component';
-import { BackdropComponent } from '../backdrop/backdrop.component';
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
+import { HeaderComponent } from '../shared/header/header.component';
+import { ModalComponent } from '../shared/modal/modal.component';
+import { BackdropComponent } from '../shared/backdrop/backdrop.component';
 
 
 

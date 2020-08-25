@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { RacesModel } from './../../../../shared/models/races.model';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-champion-detail',
   templateUrl: './champion-detail.component.html',
   styleUrls: ['./champion-detail.component.scss']
 })
-export class ChampionDetailComponent implements OnInit {
+export class ChampionDetailComponent implements OnInit, OnDestroy {
 
   year: number;
-  racesChampions = [];
+  racesChampions: RacesModel[] = [];
   driverCode: string;
-  isLoading = false;
-  showModal = false;
-  selectedRace;
+  isLoading: boolean = false;
+  showModal: boolean = false;
+  selectedRace: RacesModel;
+  racesSubscription: Subscription;
 
   constructor(private route: ActivatedRoute,
               private apiService: ApiServiceService) { }
@@ -23,8 +26,8 @@ export class ChampionDetailComponent implements OnInit {
     this.isLoading = true;
     this.route.params.subscribe((params) => {
       this.year = +params.year;
-      this.apiService.getAllRacesForYear(this.year)
-        .subscribe(races => {
+      this.racesSubscription = this.apiService.getAllRacesForYear(this.year)
+        .subscribe((races: RacesModel[]) => {
           this.racesChampions = races;
           this.route.queryParams
             .subscribe(queryParams => {
@@ -35,13 +38,17 @@ export class ChampionDetailComponent implements OnInit {
     });
   }
 
-  showDetails(race) {
+  showDetails(race: RacesModel): void {
     this.selectedRace = race;
     this.showModal = true;
   }
 
-  close() {
+  close(): void {
     this.showModal = false;
+  }
+
+  ngOnDestroy(): void {
+    this.racesSubscription.unsubscribe();
   }
 
 }

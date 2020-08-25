@@ -10,7 +10,7 @@ export class BackdropComponent {
 
   @Output() closeEmitter = new Subject();
 
-  closeModal() {
+  closeModal(): void {
     this.closeEmitter.next(false);
   }
 

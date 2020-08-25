@@ -10,7 +10,7 @@ export class HeaderComponent {
 
   constructor(private router: Router){}
 
-  navigateTo(section: string) {
+  navigateTo(section: string): void {
     this.router.navigate(["/seasonChampions"]);
     window.location.hash = '';
     window.location.hash = section;

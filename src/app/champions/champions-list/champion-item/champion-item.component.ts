@@ -1,3 +1,4 @@
+import { ChampionsModel } from './../../../shared/models/champions.model';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class ChampionItemComponent {
 
-  @Input() season;
+  @Input() season: ChampionsModel;
 
   constructor(private router: Router) { }
 
-  openDetails() {
+  openDetails(): void {
     this.router.navigate(['seasonChampions', this.season.season], {queryParams: {code: this.season.DriverStandings[0].Driver.code}});
   }
 

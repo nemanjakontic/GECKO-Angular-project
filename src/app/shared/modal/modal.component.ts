@@ -1,3 +1,4 @@
+import { RacesModel } from '../../shared/models/races.model';
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { EventEmitter } from 'protractor';
 import { Subject } from 'rxjs';
@@ -9,10 +10,10 @@ import { Subject } from 'rxjs';
 })
 export class ModalComponent {
 
-  @Input() race;
+  @Input() race: RacesModel;
   @Output() closeEmitter = new Subject<boolean>();
 
-  closeModal() {
+  closeModal(): void {
     this.closeEmitter.next(false);
   }
 
