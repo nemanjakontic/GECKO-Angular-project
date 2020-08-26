@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ChampionsComponent } from './champions/champions.component';
-import { ChampionDetailComponent } from './champions/champions-list/champion-item/champion-detail/champion-detail.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'seasonChampions', pathMatch: 'full'},
-  { path: 'seasonChampions', loadChildren: './champions/champions.module#ChampionsModule'}
+  { path: 'seasonChampions', loadChildren: () => import('./champions/champions.module').then(m => m.ChampionsModule)}
 ];
 
 @NgModule({

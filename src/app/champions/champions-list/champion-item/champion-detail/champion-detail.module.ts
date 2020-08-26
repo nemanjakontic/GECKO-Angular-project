@@ -1,3 +1,4 @@
+import { ModalModule } from './../../../../shared/modal.module';
 import { SharedModule } from './../../../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,12 +9,14 @@ import { ChampionDetailComponent } from './champion-detail.component';
     ChampionDetailComponent
   ],
   imports: [
-    SharedModule
+    SharedModule,
+    ModalModule
   ],
   exports: [
     ChampionDetailComponent,
     CommonModule,
-    SharedModule
+    SharedModule,
+    ModalModule
   ]
 })
 export class ChampionDetailModule { }
