@@ -15,7 +15,6 @@ export class ApiServiceService {
     return this.http.get<ResponseModel>(
         environment.apiUrl + environment.getAllChampions
         ).pipe(map((response: ResponseModel) => {
-          console.log(response);
           return response.MRData.StandingsTable.StandingsLists;
         }));
   }
@@ -24,7 +23,6 @@ export class ApiServiceService {
     return this.http.get<ResponseModel>(
         environment.apiUrl + year + environment.getAllRacesForYear
         ).pipe(map((response: ResponseModel) => {
-          console.log(response);
           return response.MRData.RaceTable.Races;
         }));
   }

@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { HeaderComponent } from './header/header.component';
+import { FontDirectiveDirective } from './font-directive/font-directive.directive';
 
 
 
 @NgModule({
   declarations: [
     LoadingSpinnerComponent,
+    FontDirectiveDirective,
     HeaderComponent
   ],
   imports: [
@@ -16,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
   exports: [
     CommonModule,
     LoadingSpinnerComponent,
-    HeaderComponent
+    HeaderComponent,
+    FontDirectiveDirective
   ]
 })
 export class SharedModule { }

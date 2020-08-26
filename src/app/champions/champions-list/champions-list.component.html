@@ -1,11 +1,11 @@
 <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
-<div class="row" *ngIf="!isLoading">
+<section class="row" *ngIf="!isLoading">
     <app-champion-item 
         class="col-10 offset-1 col-md-6 offset-md-0 col-lg-4 mb-5"
         *ngFor="let season of listOfSeasons" 
         [season]="season"
     ></app-champion-item>
-</div>
+</section>
 <div class="alert alert-danger" role="alert" *ngIf="error">
     {{error}}
 </div>

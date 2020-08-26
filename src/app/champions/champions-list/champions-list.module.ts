@@ -1,6 +1,5 @@
 import { ChampionItemModule } from './champion-item/champion-item.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ChampionsListComponent } from './champions-list.component';
 
 
@@ -14,7 +13,6 @@ import { ChampionsListComponent } from './champions-list.component';
   ],
   exports: [
     ChampionsListComponent,
-    CommonModule,
     ChampionItemModule
   ]
 })

@@ -1,7 +1,6 @@
 import { BackdropModule } from './backdrop/backdrop.module';
 import { ModalWindowModule } from './modal/modal-window.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 
 
@@ -9,14 +8,12 @@ import { CommonModule } from '@angular/common';
   declarations: [
   ],
   imports: [
-    CommonModule,
     ModalWindowModule,
     BackdropModule
   ],
   exports: [
     ModalWindowModule,
-    BackdropModule,
-    CommonModule
+    BackdropModule
   ]
 })
 export class ModalModule { }

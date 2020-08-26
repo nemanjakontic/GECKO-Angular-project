@@ -15,9 +15,9 @@
                             <h3 class="heading-tertiary text-center">DRIVER</h3>
                             <ul class="text-center">
                                 <li>{{race.Results[0].Driver.givenName}} {{race.Results[0].Driver.familyName}}</li>
-                                <li>{{race.Results[0].Driver.dateOfBirth}}</li>
+                                <li>{{race.Results[0].Driver.dateOfBirth | date: 'dd/MM/yyyy'}}</li>
                                 <li>{{race.Results[0].Driver.nationality}}</li>
-                                <li>{{race.Results[0].Constructor.name}}</li>
+                                <li>{{race.Results[0].Constructor.name | uppercase}}</li>
                             </ul>
                         </div>
                         <div class="col-6">
