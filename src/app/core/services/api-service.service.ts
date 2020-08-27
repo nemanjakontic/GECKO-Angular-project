@@ -1,5 +1,5 @@
-import { ResponseModel } from './../shared/models/response-model';
-import { environment } from './../../environments/environment';
+import { ResponseModel } from '../../core/interfaces/response-model';
+import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';

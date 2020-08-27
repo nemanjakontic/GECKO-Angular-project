@@ -1,6 +1,5 @@
-import { RacesModel } from '../../shared/models/races.model';
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { RacesModel } from '../../../core/interfaces/races.model';
+import { Component, Input, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({

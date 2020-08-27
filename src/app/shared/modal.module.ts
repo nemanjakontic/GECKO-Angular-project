@@ -1,5 +1,5 @@
-import { BackdropModule } from './backdrop/backdrop.module';
-import { ModalWindowModule } from './modal/modal-window.module';
+import { BackdropModule } from './components/backdrop/backdrop.module';
+import { ModalWindowModule } from './components/modal/modal-window.module';
 import { NgModule } from '@angular/core';
 
 

@@ -30,6 +30,7 @@
     "ngx-page-scroll-core": "^7.0.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "typeface-lato": "0.0.75",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

@@ -1,13 +1,13 @@
-@import '../../../sass/base/variables';
-@import '../../../sass/buttons/button';
-@import '../../../sass/base/animations';
+@import '../../../../sass/base/variables';
+@import '../../../../sass/buttons/button';
+@import '../../../../sass/base/animations';
 
 .header {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, .8),
         rgba($color-primary-dark, .8)), 
-        url('../../../assets/f1-background.jpg');
+        url('../../../../assets/f1-background.jpg');
     background-size: cover;
     background-position: top;
     height: 95vh;

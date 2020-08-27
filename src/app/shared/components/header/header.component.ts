@@ -11,9 +11,9 @@ export class HeaderComponent {
   constructor(private router: Router){}
 
   navigateTo(section: string): void {
-    this.router.navigate(["/seasonChampions"]);
-    window.location.hash = '';
-    window.location.hash = section;
+    this.router.navigate(["/seasonChampions"], {fragment: section});
+    // window.location.hash = '';
+    // window.location.hash = section;
   }
 
 }

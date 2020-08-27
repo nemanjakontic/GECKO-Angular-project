@@ -1,4 +1,4 @@
-import { ChampionsModel } from './../../../shared/models/champions.model';
+import { ChampionsModel } from '../../../core/interfaces/champions.model';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 

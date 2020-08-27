@@ -1,5 +1,4 @@
-<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
-<div class="mb-5 full-container" *ngIf="!isLoading">
+<div class="mb-5 full-container">
     <div class="text-center my-5">
         <h2 class="heading-secondary">
             Race winners - {{year}}
@@ -22,13 +21,13 @@
                             (click)="showDetails(race)"
                         >
                             <h3 class="heading-tertiary heading-tertiary-race">
-                                {{ race.raceName }} - 
+                                {{ race.raceName}} - 
                                 {{ race.Results[0].Driver.givenName }} 
                                 {{ race.Results[0].Driver.familyName }}
                                 &nbsp;
                                 &nbsp;
-                                <i class="fa fa-trophy" *ngIf="this.driverCode === race.Results[0].Driver.code">&nbsp;
-                                    CHAMPION</i>
+                                <i class="{{ '' | championPipe:this.driverCode:race.Results[0].Driver.code}}">&nbsp;
+                                    </i>
                             </h3>
                         </li>
                     </ul>

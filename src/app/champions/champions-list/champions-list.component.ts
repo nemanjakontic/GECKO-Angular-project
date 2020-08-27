@@ -1,6 +1,6 @@
-import { ChampionsModel } from './../../shared/models/champions.model';
+import { ChampionsModel } from '../../core/interfaces/champions.model';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ApiServiceService } from 'src/app/services/api-service.service';
+import { ApiServiceService } from 'src/app/core/services/api-service.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,22 +11,19 @@ import { Subscription } from 'rxjs';
 export class ChampionsListComponent implements OnInit, OnDestroy {
 
   listOfSeasons: ChampionsModel[] = [];
-  isLoading: boolean = false;
   error: string = null;
   championsSubscription: Subscription;
 
   constructor(private apiService: ApiServiceService) { }
 
   ngOnInit(): void {
-    this.isLoading = true;
     this.championsSubscription = this.apiService.getAllChampions()
       .subscribe((seasonsList: ChampionsModel[]) => {
         this.listOfSeasons = seasonsList;
-        this.isLoading = false;
       }, error => {
-        this.isLoading = false;
         this.error = 'Something went wrong. Try Again!';
       });
+      // const testSubscription = this.apiService.getAllRacesForYear(2006).subscribe();
   }
 
   ngOnDestroy(): void {
