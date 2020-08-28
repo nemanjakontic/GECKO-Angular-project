@@ -5,8 +5,7 @@
                             {{ season.DriverStandings[0].Driver.familyName }}</p>
     </div>
     <div class="cardChamp__side cardChamp__side--back  d-flex flex-column justify-content-center align-items-center">
-        <h3 class="heading-tertiary heading-tertiary-constructor">{{ season.DriverStandings[0].Constructors[0].name }}</h3>
+        <h3 class="heading-tertiary heading-tertiary-constructor">{{ season.DriverStandings[0].Constructors[0].name | uppercase}}</h3>
         <p class="paragraph">{{ season.DriverStandings[0].Driver.nationality }}</p>
     </div>
 </section>
-<ng-container></ng-container>
