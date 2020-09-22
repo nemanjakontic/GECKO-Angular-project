@@ -4,7 +4,7 @@ interface Circuit {
     Location: {
         country: string,
         locality: string
-    },
+    };
     circuitName: string,
     url: string
 }

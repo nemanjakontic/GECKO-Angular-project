@@ -24,6 +24,8 @@ export class ChampionsListComponent implements OnInit, OnDestroy {
         this.error = 'Something went wrong. Try Again!';
       });
       // const testSubscription = this.apiService.getAllRacesForYear(2006).subscribe();
+      // probati async pipe
+    
   }
 
   ngOnDestroy(): void {
